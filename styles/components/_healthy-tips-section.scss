@@ -1,0 +1,33 @@
+@use '../tokens/colors' as *;
+@use '../tokens/typography' as *;
+
+.healthy-tip-section{
+  padding: 96px 128px;
+  display: flex;
+  gap: 32px;
+}
+
+.healthy-tip-card{
+  display: flex;
+  flex-direction: column;
+
+  & img{
+    width: 64px;
+    height: 64px;
+  }
+
+  &__title{
+    margin-top: 48px;
+    color: $blue-900;
+    font-size: $text-preset-4;
+    line-height: $leading-preset-4;
+    font-weight: $font-weight-preset-4;
+  }
+
+  &__description{
+    margin-top: 24px;
+    font-size: $text-preset-6;
+    line-height: $leading-preset-6;
+    color: $grey-500;
+  }
+}

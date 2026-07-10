@@ -1,0 +1,5 @@
+@use '../tokens' as *;
+@use '../tokens/typography' as *;
+body{
+  font-family: $font-primary;
+}

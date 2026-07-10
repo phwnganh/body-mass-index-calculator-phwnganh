@@ -1,0 +1,31 @@
+@use '../tokens/typography' as *;
+@use '../tokens/colors' as *;
+.bmi-meaning-section{
+  padding: 20px 144px 86px;
+  display: flex;
+  align-items: center;
+
+  & img{
+    width: 564px;
+  }
+
+  & .bmi-meaning-body{
+    margin-left: 131px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    &__title{
+      font-size: $text-preset-2;
+      line-height: $leading-preset-2;
+      letter-spacing: $tracking-preset-2;
+      color: $blue-900;
+    }
+
+    &__description{
+      font-size: $text-preset-6;
+      line-height: $leading-preset-6;
+      color: $grey-500;
+    }
+  }
+}

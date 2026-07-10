@@ -1,0 +1,339 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+body {
+  font-family: "Inter", san-serif;
+}
+
+.hero-section {
+  padding: 88px 144px;
+}
+
+.hero-body {
+  display: flex;
+  gap: 32px;
+}
+
+.hero-content {
+  margin-top: 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.hero-content__title {
+  font-size: 64px;
+  line-height: 110%;
+  letter-spacing: -5%;
+  font-weight: 600;
+  color: #253347;
+}
+.hero-content__description {
+  font-size: 16px;
+  line-height: 150%;
+  color: #5E6E85;
+  max-width: 465px;
+  width: 100%;
+}
+
+.hero-form {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  box-shadow: 16px 32px 56px 0 rgba(143, 174, 207, 0.25);
+  border-radius: 16px;
+  max-width: 564px;
+  width: 100%;
+}
+.hero-form__title {
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: -5%;
+  font-weight: 600;
+  color: #253347;
+}
+.hero-form__input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.hero-form__input .inside-input {
+  position: relative;
+}
+.hero-form__input .inside-input input {
+  width: 100%;
+  padding: 16px 72px 16px 24px;
+  border: 1px solid #5E6E85;
+  border-radius: 12px;
+  box-sizing: border-box;
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
+}
+.hero-form__input .inside-input input::-webkit-outer-spin-button, .hero-form__input .inside-input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.hero-form__input .inside-input input[type=text] {
+  font-size: 24px;
+  line-height: 120%;
+  font-weight: 600;
+  color: #253347;
+}
+.hero-form__input .inside-input span {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  font-size: 24px;
+  line-height: 120%;
+  font-weight: 600;
+  color: #345FF6;
+  pointer-events: none;
+}
+.hero-form__point {
+  display: flex;
+  gap: 24px;
+}
+.hero-form__point label {
+  font-size: 14px;
+  line-height: 150%;
+  color: #5E6E85;
+}
+.hero-form__result {
+  background: #345FF6;
+  color: #ffffff;
+  padding: 32px;
+  border-radius: 0 80px 80px 0;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+.hero-form__result .result-point {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.hero-form__result .result-point p {
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 600;
+}
+.hero-form__result .result-point span {
+  display: block;
+  font-size: 64px;
+  line-height: 110%;
+  font-weight: 600;
+}
+.hero-form__result .result-description {
+  flex: 1;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fff;
+}
+.hero-form__result .result-description span {
+  font-weight: 700;
+  color: #fff;
+}
+.hero-form__type {
+  display: flex;
+  gap: 24px;
+}
+.hero-form__type .inside-radio {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.hero-form__type .inside-radio label {
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 600;
+  color: #253347;
+}
+
+.bmi-meaning-section {
+  padding: 20px 144px 86px;
+  display: flex;
+  align-items: center;
+}
+.bmi-meaning-section img {
+  width: 564px;
+}
+.bmi-meaning-section .bmi-meaning-body {
+  margin-left: 131px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.bmi-meaning-section .bmi-meaning-body__title {
+  font-size: 48px;
+  line-height: 110%;
+  letter-spacing: -5%;
+  color: #253347;
+}
+.bmi-meaning-section .bmi-meaning-body__description {
+  font-size: 16px;
+  line-height: 150%;
+  color: #5E6E85;
+}
+
+.healthy-tip-section {
+  padding: 96px 128px;
+  display: flex;
+  gap: 32px;
+}
+
+.healthy-tip-card {
+  display: flex;
+  flex-direction: column;
+}
+.healthy-tip-card img {
+  width: 64px;
+  height: 64px;
+}
+.healthy-tip-card__title {
+  margin-top: 48px;
+  color: #253347;
+  font-size: 24px;
+  line-height: 120%;
+  font-weight: 600;
+}
+.healthy-tip-card__description {
+  margin-top: 24px;
+  font-size: 16px;
+  line-height: 150%;
+  color: #5E6E85;
+}
+
+.bmi-limitations-section {
+  padding: 104px 144px;
+  display: grid;
+  grid-template-columns: 564px 1fr;
+  align-items: start;
+}
+
+.bmi-limitations-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.bmi-limitations-content__title {
+  color: #253347;
+  font-size: 48px;
+  line-height: 110%;
+  letter-spacing: -5%;
+  font-weight: 600;
+}
+.bmi-limitations-content__description {
+  color: #5E6E85;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.bmi-limitations-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 32px;
+}
+
+.bmi-limitations-card:nth-child(1) {
+  grid-column: 3/6;
+}
+
+.bmi-limitations-card:nth-child(2) {
+  grid-column: 2/4;
+}
+
+.bmi-limitations-card:nth-child(3) {
+  grid-column: 4/6;
+}
+
+.bmi-limitations-card:nth-child(4) {
+  grid-column: 1/3;
+}
+
+.bmi-limitations-card:nth-child(5) {
+  grid-column: 3/5;
+}
+
+.bmi-limitations-card {
+  padding: 32px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 385px;
+  box-shadow: 16px 32px 56px 0 rgba(143, 174, 207, 0.25);
+}
+.bmi-limitations-card__title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.bmi-limitations-card__title h1 {
+  color: #253347;
+  font-size: 20px;
+  line-height: 120%;
+  font-weight: 600;
+}
+.bmi-limitations-card__description {
+  color: #5E6E85;
+  font-size: 16px;
+  line-height: 150%;
+}/*# sourceMappingURL=style.css.map */
