@@ -33,7 +33,7 @@
 }
 
 
-.hero-form{
+.hero-card{
   padding: 32px;
   display: flex;
   flex-direction: column;
@@ -49,62 +49,6 @@
     letter-spacing: $tracking-preset-4;
     font-weight: $font-weight-preset-4;
     color: $blue-900;
-  }
-
-  &__input{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-
-    & .inside-input{
-      position: relative;
-
-      & input{
-        width: 100%;
-        padding: 16px 72px 16px 24px;
-        border: 1px solid $grey-500;
-        border-radius: 12px;
-        box-sizing: border-box;
-        -moz-appearance: textfield;
-        appearance: textfield;
-
-        &::-webkit-outer-spin-button,
-        &::-webkit-inner-spin-button{
-          -webkit-appearance: none;
-          margin: 0;
-        }
-      }
-
-      & input[type='text']{
-        font-size: $text-preset-4;
-        line-height: $leading-preset-4;
-        font-weight: $font-weight-preset-4;
-        color: $blue-900;
-      }
-
-      & span{
-        position: absolute;
-        top: 50%;
-        right: 24px;
-        transform: translateY(-50%);
-        font-size: $text-preset-4;
-        line-height: $leading-preset-4;
-        font-weight: $font-weight-preset-4;
-        color: $blue-500;
-        pointer-events: none;
-      }
-    }
-  }
-
-  &__point{
-    display: flex;
-    gap: 24px;
-
-    & label{
-      font-size: $text-preset-7;
-      line-height: $leading-preset-7;
-      color: $grey-500;
-    }
   }
 
   &__result{
@@ -148,22 +92,126 @@
       }
     }
   }
+}
 
-  &__type{
+.hero-form{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  &__input{
     display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    & .input-card{
+      position: relative;
+
+      & #height, & #weight{
+        padding: 16px 72px 16px 24px;
+        border: 1px solid $grey-500;
+        border-radius: 12px;
+        box-sizing: border-box;
+        -moz-appearance: textfield;
+        appearance: textfield;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button{
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+
+      & input[type='text']{
+        font-size: $text-preset-4;
+        line-height: $leading-preset-4;
+        font-weight: $font-weight-preset-4;
+        color: $blue-900;
+      }
+
+      & span{
+        position: absolute;
+        top: 50%;
+        right: 24px;
+        transform: translateY(-50%);
+        font-size: $text-preset-4;
+        line-height: $leading-preset-4;
+        font-weight: $font-weight-preset-4;
+        color: $blue-500;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__point{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 
-    & .inside-radio{
+    & label{
+      font-size: $text-preset-7;
+      line-height: $leading-preset-7;
+      color: $grey-500;
+    }
+  }
+
+  &__type{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+
+    & .radio-card{
       display: flex;
       align-items: center;
       gap: 16px;
+      justify-items: flex-start;
 
-      & label{
+      & #metric, & #imperial{
+        width: auto !important;
+      }
+
+      & span{
         font-size: $text-preset-6;
         line-height: $leading-preset-6;
         font-weight: $font-weight-preset-6;
         color: $blue-900;
       }
     }
+  }
+
+}
+
+@media (max-width: 1024px) {
+  .hero-section{
+    padding: 32px 40px 0 40px;
+    text-align: center;
+  }
+
+  .hero-logo{
+    display: block;
+    margin: 0 auto;
+  }
+
+  .hero-body{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-content{
+    margin-top: 40px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-card{
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section{
+    padding: 32px 24px;
+  }
+  .hero-form__point{
+    grid-template-columns: 1fr;
   }
 }

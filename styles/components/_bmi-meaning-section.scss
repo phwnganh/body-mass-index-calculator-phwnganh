@@ -3,10 +3,12 @@
 .bmi-meaning-section{
   padding: 20px 144px 86px;
   display: flex;
-  align-items: center;
+  align-items: end;
 
-  & img{
-    width: 564px;
+  & .bmi-meaning-image{
+    max-width: 564px;
+    width: 100%;
+    flex-basis: 50%;
   }
 
   & .bmi-meaning-body{
@@ -14,6 +16,7 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
+    flex-basis: 50%;
 
     &__title{
       font-size: $text-preset-2;
@@ -26,6 +29,40 @@
       font-size: $text-preset-6;
       line-height: $leading-preset-6;
       color: $grey-500;
+    }
+  }
+}
+
+@media(max-width: 1024px){
+  .bmi-meaning-section{
+    padding: 88px 32px 0 0;
+    align-items: center;
+    overflow: hidden;
+
+    & .bmi-meaning-image{
+      max-width: 100%;
+
+      & img{
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    & .bmi-meaning-body{
+      margin-left: 72px;
+    }
+  }
+}
+
+@media(max-width: 576px){
+  .bmi-meaning-section{
+    flex-direction: column;
+    padding: 0;
+
+    & .bmi-meaning-body{
+      padding: 48px 24px 0 24px;
+      margin-left: 0;
     }
   }
 }

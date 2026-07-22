@@ -31,3 +31,31 @@
     color: $grey-500;
   }
 }
+
+@media(max-width: 1024px){
+  .healthy-tip-section{
+    padding: 50px 40px;
+    flex-direction: column;
+  }
+
+  .healthy-tip-card{
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+@media(max-width: 576px){
+  .healthy-tip-section{
+    padding: 48px 24px;
+  }
+  .healthy-tip-card{
+    flex-direction: column;
+    align-items: start;
+    gap: 0;
+
+    &__title{
+      margin-top: 32px;
+    }
+  }
+}
