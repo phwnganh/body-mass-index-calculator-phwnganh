@@ -235,8 +235,15 @@ body {
 
 @media (max-width: 1024px) {
   .hero-section {
-    padding: 32px 40px 0 40px;
     text-align: left;
+  }
+  .hero-container {
+    padding: 32px 40px 0 40px;
+  }
+  .hero-container::before {
+    height: 80%;
+    width: 100%;
+    border-radius: 0 0 40px 40px;
   }
   .hero-logo {
     display: block;
@@ -262,7 +269,7 @@ body {
   }
 }
 @media (max-width: 576px) {
-  .hero-section {
+  .hero-container {
     padding: 32px 24px;
   }
   .hero-form__point {

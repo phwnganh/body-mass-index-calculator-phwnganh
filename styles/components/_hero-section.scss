@@ -1,7 +1,6 @@
 @use "../tokens/typography" as *;
 @use "../tokens/colors" as *;
 
-
 .hero-container {
   position: relative;
   padding: 88px 144px;
@@ -198,8 +197,17 @@
 
 @media (max-width: 1024px) {
   .hero-section {
-    padding: 32px 40px 0 40px;
     text-align: left;
+  }
+
+  .hero-container {
+    padding: 32px 40px 0 40px;
+  }
+
+  .hero-container::before{
+    height: 80%;
+    width: 100%;
+    border-radius: 0 0 40px 40px;
   }
 
   .hero-logo {
@@ -232,7 +240,7 @@
 }
 
 @media (max-width: 576px) {
-  .hero-section {
+  .hero-container {
     padding: 32px 24px;
   }
   .hero-form__point {
