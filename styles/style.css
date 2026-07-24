@@ -60,13 +60,27 @@ body {
   font-family: "Inter", san-serif;
 }
 
-.hero-section {
+.hero-container {
+  position: relative;
   padding: 88px 144px;
+}
+
+.hero-container::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(180deg, #D6FCFE 0%, #D6E6FE 100%);
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 70%;
+  border-radius: 0 40px 40px 0;
 }
 
 .hero-body {
   display: flex;
   gap: 32px;
+  position: relative;
 }
 
 .hero-content {
@@ -99,6 +113,7 @@ body {
   border-radius: 16px;
   max-width: 564px;
   width: 100%;
+  background-color: #ffffff;
 }
 .hero-card__title {
   font-size: 24px;
