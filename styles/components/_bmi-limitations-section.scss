@@ -1,19 +1,27 @@
-@use '../tokens/typography' as *;
-@use '../tokens/colors' as *;
+@use "../tokens/typography" as *;
+@use "../tokens/colors" as *;
 
 .bmi-limitations-section {
-  padding: 104px 144px;
-  display: grid;
-  grid-template-columns: 564px 1fr;
-  align-items: start;
+  max-width: 1160px;
+  margin: 0 auto;
 }
 
-.bmi-limitations-content{
+.bmi-limitations-container {
+  position: relative;
+  display: flex;
+}
+
+.bmi-limitations-content {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: 564px;
+  width: 100%;
 
-  &__title{
+  &__title {
     color: $blue-900;
     font-size: $text-preset-2;
     line-height: $leading-preset-2;
@@ -21,54 +29,29 @@
     font-weight: $font-weight-preset-2;
   }
 
-  &__description{
+  &__description {
     color: $grey-500;
     font-size: $text-preset-6;
     line-height: $leading-preset-6;
   }
 }
 
-.bmi-limitations-list{
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 32px;
-}
-
-.bmi-limitations-card:nth-child(1){
-  grid-column: 3/6;
-}
-
-.bmi-limitations-card:nth-child(2){
-  grid-column: 2/4;
-}
-
-.bmi-limitations-card:nth-child(3){
-  grid-column: 4/6;
-}
-
-.bmi-limitations-card:nth-child(4){
-  grid-column: 1/3;
-}
-
-.bmi-limitations-card:nth-child(5){
-  grid-column: 3/5;
-}
-
-.bmi-limitations-card{
+.bmi-limitations-card {
+  max-width: 365px;
   padding: 32px;
+  box-sizing: border-box;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  max-width: 385px;
-  box-shadow: 16px 32px 56px 0 rgba(143,174,207,0.25);
+  box-shadow: 16px 32px 56px 0 rgba(143, 174, 207, 0.25);
 
-  &__title{
+  &__title {
     display: flex;
     align-items: center;
     gap: 16px;
 
-    & h1{
+    & h1 {
       color: $blue-900;
       font-size: $text-preset-5;
       line-height: $leading-preset-5;
@@ -76,9 +59,104 @@
     }
   }
 
-  &__description{
+  &__description {
     color: $grey-500;
     font-size: $text-preset-6;
     line-height: $leading-preset-6;
+  }
+}
+
+.bmi-limitation-row-1 {
+  position: absolute;
+  left: 692px;
+  top: 0;
+}
+
+.bmi-limitations-list-row-2 {
+  margin-top: 32px;
+  display: flex;
+  gap: 32px;
+  position: absolute;
+  left: 400px;
+  top: 270px;
+}
+
+.bmi-limitations-list-row-3 {
+  margin-top: 32px;
+  display: flex;
+  gap: 32px;
+  position: absolute;
+  left: 200px;
+  top: 520px;
+}
+
+.bmi-limitation-image {
+  position: absolute;
+  top: 251px;
+  left: 161px;
+}
+
+.bmi-limitations-tablet-container {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .bmi-limitations-section {
+    width: 100%;
+    padding-inline: 40px;
+    padding-top: 96px;
+  }
+
+  .bmi-limitations-container {
+    display: none;
+  }
+
+  .bmi-limitations-tablet-container {
+    display: flex;
+    flex-direction: column;
+
+    &__row-1 {
+      margin-top: 56px;
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    &__row-2 {
+      margin-top: 24px;
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    &__row-3 {
+      margin-top: 24px;
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+    }
+  }
+
+  .bmi-limitations-content {
+    position: static;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .bmi-limitation-image {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .bmi-limitations-tablet-container__row-1,
+  .bmi-limitations-tablet-container__row-2,
+  .bmi-limitations-tablet-container__row-3 {
+    flex-direction: column;
+    margin-top: 16px;
+  }
+  .bmi-limitations-card {
+    max-width: 100%;
   }
 }
