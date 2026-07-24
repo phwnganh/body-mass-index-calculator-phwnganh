@@ -191,6 +191,9 @@ body {
   font-weight: 600;
   color: #253347;
 }
+.hero-form__input .input-card input[type=text]:hover, .hero-form__input .input-card input[type=text]:focus {
+  outline: 1px solid #345FF6;
+}
 .hero-form__input .input-card span {
   position: absolute;
   top: 50%;
@@ -231,6 +234,47 @@ body {
   line-height: 150%;
   font-weight: 600;
   color: #253347;
+}
+
+.hero-form-input__weight, .hero-form-input__height {
+  display: flex;
+  gap: 24px;
+}
+.hero-form-input__weight .input-card, .hero-form-input__height .input-card {
+  position: relative;
+}
+.hero-form-input__weight .input-card #height-ft, .hero-form-input__weight .input-card #height-in, .hero-form-input__weight .input-card #weight-st, .hero-form-input__weight .input-card #weight-lbs, .hero-form-input__height .input-card #height-ft, .hero-form-input__height .input-card #height-in, .hero-form-input__height .input-card #weight-st, .hero-form-input__height .input-card #weight-lbs {
+  padding: 16px 72px 16px 24px;
+  border: 1px solid #5E6E85;
+  border-radius: 12px;
+  box-sizing: border-box;
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
+}
+.hero-form-input__weight .input-card #height-ft::-webkit-outer-spin-button, .hero-form-input__weight .input-card #height-ft::-webkit-inner-spin-button, .hero-form-input__weight .input-card #height-in::-webkit-outer-spin-button, .hero-form-input__weight .input-card #height-in::-webkit-inner-spin-button, .hero-form-input__weight .input-card #weight-st::-webkit-outer-spin-button, .hero-form-input__weight .input-card #weight-st::-webkit-inner-spin-button, .hero-form-input__weight .input-card #weight-lbs::-webkit-outer-spin-button, .hero-form-input__weight .input-card #weight-lbs::-webkit-inner-spin-button, .hero-form-input__height .input-card #height-ft::-webkit-outer-spin-button, .hero-form-input__height .input-card #height-ft::-webkit-inner-spin-button, .hero-form-input__height .input-card #height-in::-webkit-outer-spin-button, .hero-form-input__height .input-card #height-in::-webkit-inner-spin-button, .hero-form-input__height .input-card #weight-st::-webkit-outer-spin-button, .hero-form-input__height .input-card #weight-st::-webkit-inner-spin-button, .hero-form-input__height .input-card #weight-lbs::-webkit-outer-spin-button, .hero-form-input__height .input-card #weight-lbs::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.hero-form-input__weight .input-card input[type=text], .hero-form-input__height .input-card input[type=text] {
+  font-size: 24px;
+  line-height: 120%;
+  font-weight: 600;
+  color: #253347;
+}
+.hero-form-input__weight .input-card input[type=text]:hover, .hero-form-input__weight .input-card input[type=text]:focus, .hero-form-input__height .input-card input[type=text]:hover, .hero-form-input__height .input-card input[type=text]:focus {
+  outline: 1px solid #345FF6;
+}
+.hero-form-input__weight .input-card span, .hero-form-input__height .input-card span {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  font-size: 24px;
+  line-height: 120%;
+  font-weight: 600;
+  color: #345FF6;
+  pointer-events: none;
 }
 
 @media (max-width: 1024px) {

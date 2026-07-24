@@ -143,6 +143,10 @@
         color: $blue-900;
       }
 
+      & input[type="text"]:hover, & input[type="text"]:focus{
+        outline: 1px solid $blue-500;
+      }
+
       & span {
         position: absolute;
         top: 50%;
@@ -194,6 +198,57 @@
     }
   }
 }
+
+.hero-form-input__weight, .hero-form-input__height{
+  display: flex;
+  gap: 24px;
+
+  & .input-card{
+    position: relative;
+
+      & #height-ft, 
+      & #height-in,
+      & #weight-st,
+      & #weight-lbs {
+        padding: 16px 72px 16px 24px;
+        border: 1px solid $grey-500;
+        border-radius: 12px;
+        box-sizing: border-box;
+        -moz-appearance: textfield;
+        appearance: textfield;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+
+      & input[type="text"] {
+        font-size: $text-preset-4;
+        line-height: $leading-preset-4;
+        font-weight: $font-weight-preset-4;
+        color: $blue-900;
+      }
+
+      & input[type="text"]:hover, & input[type="text"]:focus{
+        outline: 1px solid $blue-500;
+      }
+
+      & span {
+        position: absolute;
+        top: 50%;
+        right: 24px;
+        transform: translateY(-50%);
+        font-size: $text-preset-4;
+        line-height: $leading-preset-4;
+        font-weight: $font-weight-preset-4;
+        color: $blue-500;
+        pointer-events: none;
+      }
+  }
+}
+
 
 @media (max-width: 1024px) {
   .hero-section {
