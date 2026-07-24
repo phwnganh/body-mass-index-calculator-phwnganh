@@ -73,7 +73,7 @@ const renderImperial = () => {
   weightLbsInput.addEventListener("input", handleCalculateImperialBmi);
 };
 
-const calculateIdealWeight = (heightInMeter, weightInKg) => {
+const calculateIdealWeight = (heightInMeter) => {
   const minWeight = 18.5 * (heightInMeter ** 2);
   const maxWeight = 24.9 * (heightInMeter ** 2);
 
@@ -85,8 +85,8 @@ const calculateIdealWeight = (heightInMeter, weightInKg) => {
 
 const calculateIdealStonePounds = (weightInKg) => {
   const totalPounds = weightInKg / 0.45359237;
-  const stone = Math.floor(totalPounds / 14);
-  const pounds = Math.round(totalPounds % 14);
+  let stone = Math.floor(totalPounds / 14);
+  let pounds = Math.round(totalPounds % 14);
 
   if (pounds === 14) {
     stone += 1;
@@ -179,9 +179,15 @@ const imperialTemplate = `
               </div>
 `;
 
-metricRadio.addEventListener("change", renderMetric);
+metricRadio.addEventListener("change", () => {
+  heroFormPoint.classList.remove("hero-form__point--imperial")
+  renderMetric()
+});
 
-imperialRadio.addEventListener("change", renderImperial);
+imperialRadio.addEventListener("change", () => {
+  heroFormPoint.classList.add("hero-form__point--imperial");
+  renderImperial()
+});
 
 heroFormPoint.innerHTML = metricTemmplate;
 

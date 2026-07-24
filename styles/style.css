@@ -215,6 +215,10 @@ body {
   line-height: 150%;
   color: #5E6E85;
 }
+.hero-form__point--imperial {
+  display: flex;
+  flex-direction: column;
+}
 .hero-form__type {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
