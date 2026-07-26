@@ -99,11 +99,11 @@ const calculateIdealStonePounds = (weightInKg) => {
 };
 
 const handleConvertFromKgToPound = (minWeight, maxWeight) => {
-  const minIdeal = calculateIdealStonePounds(minWeight);
-  const maxIdeal = calculateIdealStonePounds(maxWeight);
+  const minPound = calculateIdealStonePounds(minWeight);
+  const maxPound = calculateIdealStonePounds(maxWeight);
   return {
-    minIdeal,
-    maxIdeal,
+    minPound,
+    maxPound,
   };
 };
 
@@ -115,7 +115,7 @@ const renderResult = (bmi, heightInMeter, type) => {
   const category = getBmiCategory(bmi);
 
   const { minWeight, maxWeight } = calculateIdealWeight(heightInMeter);
-  const { minIdeal, maxIdeal } = handleConvertFromKgToPound(
+  const { minPound, maxPound } = handleConvertFromKgToPound(
     minWeight,
     maxWeight,
   );
@@ -126,7 +126,7 @@ const renderResult = (bmi, heightInMeter, type) => {
   }
   if (type === "imperial") {
     resultDescription.innerHTML = `Your BMI suggests you're <span>${category}</span>. Your ideal weight is
-              between <strong>${minIdeal.stone}st ${minIdeal.pounds}lbs - ${maxIdeal.stone}st ${maxIdeal.pounds}lbs</strong>.`;
+              between <strong>${minPound.stone}st ${minPound.pounds}lbs - ${maxPound.stone}st ${maxPound.pounds}lbs</strong>.`;
   }
 };
 const metricTemmplate = `

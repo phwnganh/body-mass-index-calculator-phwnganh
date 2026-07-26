@@ -154,10 +154,6 @@ body {
   line-height: 150%;
   color: #fff;
 }
-.hero-card__result .result-description span {
-  font-weight: 700;
-  color: #fff;
-}
 
 .hero-form {
   display: flex;
