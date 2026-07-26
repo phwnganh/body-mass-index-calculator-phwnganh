@@ -142,7 +142,7 @@ body {
   line-height: 150%;
   font-weight: 600;
 }
-.hero-card__result .result-point span {
+.hero-card__result .result-point #bmi-result {
   display: block;
   font-size: 64px;
   line-height: 110%;
@@ -431,7 +431,7 @@ body {
 }
 .bmi-limitations-section {
   max-width: 1160px;
-  margin: 0 auto;
+  margin: 0 auto 104px 0;
 }
 
 .bmi-limitations-container {

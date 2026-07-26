@@ -34,7 +34,7 @@
           </p>
         </div>
         <div class="hero-card">
-          <h1 class="hero-card__title">Enter your details below</h1>
+          <h2 class="hero-card__title">Enter your details below</h2>
           <form class="hero-form">
             <div class="hero-form__type">
               <label class="radio-card" for="metric">
@@ -52,12 +52,12 @@
             </div>
           </form>
 
-          <div class="hero-card__result">
+          <div class="hero-card__result" aria-live="polite" aria-atomic="true">
             <div class="result-point">
               <p>Your BMI is...</p>
-              <span></span>
+              <span id="bmi-result"></span>
             </div>
-            <div class="result-description">
+            <div class="result-description" id="bmi-description">
               
             </div>
           </div>
@@ -73,7 +73,7 @@
       </div>
 
       <div class="bmi-meaning-body">
-        <h1 class="bmi-meaning-body__title">What your BMI result means</h1>
+        <h2 class="bmi-meaning-body__title">What your BMI result means</h2>
         <p class="bmi-meaning-body__description">
           A BMI range of 18.5 to 24.9 is considered a 'healthy weight.'
           Maintaining a healthy weight may lower your chances of experiencing
@@ -93,7 +93,7 @@
           class="healthy-tip-card__icon"
         />
         <div class="healthy-tip-card__section">
-          <h1 class="healthy-tip-card__title">Healthy eating</h1>
+          <h3 class="healthy-tip-card__title">Healthy eating</h3>
           <p class="healthy-tip-card__description">
             Healthy eating promotes weight control, disease prevention, better
             digestion, immunity, mental clarity, and mood.
@@ -108,7 +108,7 @@
           class="healthy-tip-card__icon"
         />
         <div class="healthy-tip-card__section">
-          <h1 class="healthy-tip-card__title">Regular exercise</h1>
+          <h3 class="healthy-tip-card__title">Regular exercise</h3>
           <p class="healthy-tip-card__description">
             Exercise improves fitness, aids weight control, elevates mood, and
             reduces disease risk, fostering wellness and longevity.
@@ -123,7 +123,7 @@
           class="healthy-tip-card__icon"
         />
         <div class="healthy-tip-card__section">
-          <h1 class="healthy-tip-card__title">Adequate sleep</h1>
+          <h3 class="healthy-tip-card__title">Adequate sleep</h3>
           <p class="healthy-tip-card__description">
             Sleep enhances mental clarity, emotional stability, and physical
             wellness, promoting overall restoration and rejuvenation.
@@ -135,7 +135,7 @@
     <section class="bmi-limitations-section">
       <div class="bmi-limitations-container">
         <div class="bmi-limitations-content">
-          <h1 class="bmi-limitations-content__title">Limitations of BMI</h1>
+          <h2 class="bmi-limitations-content__title">Limitations of BMI</h2>
           <p class="bmi-limitations-content__description">
             Although BMI is often a practical indicator of healthy weight, it is
             not suited for every person. Specific groups should carefully
@@ -148,10 +148,11 @@
           <div class="bmi-limitations-card__title">
             <img
               src="assets/images/icon-gender.svg"
-              alt="icon-gender"
+              alt=""
+              aria-hidden="true"
               class="bmi-limitations-card__icon"
             />
-            <h1 class="card-text">Gender</h1>
+            <h3 class="card-text">Gender</h3>
           </div>
           <p class="bmi-limitations-card__description">
             The development and body fat composition of girls and boys vary with
@@ -164,10 +165,11 @@
             <div class="bmi-limitations-card__title">
               <img
                 src="assets/images/icon-age.svg"
-                alt="icon-age"
+                alt=""
+                aria-hidden="true"
                 class="bmi-limitations-card__icon"
               />
-              <h1 class="card-text">Age</h1>
+              <h3 class="card-text">Age</h3>
             </div>
             <p class="bmi-limitations-card__description">
               In aging individuals, increased body fat and muscle loss may cause
@@ -179,10 +181,11 @@
             <div class="bmi-limitations-card__title">
               <img
                 src="assets/images/icon-muscle.svg"
-                alt="icon-muscle"
+                alt=""
+                aria-hidden="true"
                 class="bmi-limitations-card__icon"
               />
-              <h1 class="card-text">Muscle</h1>
+              <h3 class="card-text">Muscle</h3>
             </div>
             <p class="bmi-limitations-card__description">
               BMI may misclassify muscular individuals as overweight or obese,
@@ -196,10 +199,11 @@
             <div class="bmi-limitations-card__title">
               <img
                 src="assets/images/icon-pregnancy.svg"
-                alt="icon-weight"
+                alt=""
+                aria-hidden="true"
                 class="bmi-limitations-card__icon"
               />
-              <h1 class="card-text">Pregnancy</h1>
+              <h3 class="card-text">Pregnancy</h3>
             </div>
             <p class="bmi-limitations-card__description">
               Expectant mothers experience weight gain due to their growing
@@ -212,10 +216,11 @@
             <div class="bmi-limitations-card__title">
               <img
                 src="assets/images/icon-race.svg"
-                alt="icon-race"
+                alt=""
+                aria-hidden="true"
                 class="bmi-limitations-card__icon"
               />
-              <h1 class="card-text">Race</h1>
+              <h3 class="card-text">Race</h3>
             </div>
             <p class="bmi-limitations-card__description">
               Certain health concerns may affect individuals of some Black and
@@ -248,10 +253,11 @@
             <div class="bmi-limitations-card__title">
               <img
                 src="assets/images/icon-gender.svg"
-                alt="icon-gender"
+                alt=""
+                aria-hidden="true"
                 class="bmi-limitations-card__icon"
               />
-              <h1 class="card-text">Gender</h1>
+              <h3 class="card-text">Gender</h3>
             </div>
             <p class="bmi-limitations-card__description">
             The development and body fat composition of girls and boys vary with
@@ -263,10 +269,11 @@
             <div class="bmi-limitations-card__title">
               <img
                 src="assets/images/icon-age.svg"
-                alt="icon-age"
+                alt=""
+                aria-hidden="true"
                 class="bmi-limitations-card__icon"
               />
-              <h1 class="card-text">Age</h1>
+              <h3 class="card-text">Age</h3>
             </div>
             <p class="bmi-limitations-card__description">
               In aging individuals, increased body fat and muscle loss may cause
@@ -279,10 +286,11 @@
             <div class="bmi-limitations-card__title">
               <img
                 src="assets/images/icon-muscle.svg"
-                alt="icon-muscle"
+                alt=""
+                aria-hidden="true"
                 class="bmi-limitations-card__icon"
               />
-              <h1 class="card-text">Muscle</h1>
+              <h3 class="card-text">Muscle</h3>
             </div>
             <p class="bmi-limitations-card__description">
               BMI may misclassify muscular individuals as overweight or obese,
@@ -294,10 +302,11 @@
             <div class="bmi-limitations-card__title">
               <img
                 src="assets/images/icon-pregnancy.svg"
-                alt="icon-weight"
+                alt=""
+                aria-hidden="true"
                 class="bmi-limitations-card__icon"
               />
-              <h1 class="card-text">Pregnancy</h1>
+              <h3 class="card-text">Pregnancy</h3>
             </div>
             <p class="bmi-limitations-card__description">
               Expectant mothers experience weight gain due to their growing
@@ -312,10 +321,11 @@
             <div class="bmi-limitations-card__title">
               <img
                 src="assets/images/icon-race.svg"
-                alt="icon-race"
+                alt=""
+                aria-hidden="true"
                 class="bmi-limitations-card__icon"
               />
-              <h1 class="card-text">Race</h1>
+              <h3 class="card-text">Race</h3>
             </div>
             <p class="bmi-limitations-card__description">
               Certain health concerns may affect individuals of some Black and
@@ -325,9 +335,6 @@
           </div>
         </div>
     </section>
-
-    <!-- add classification -->
-    <!-- add range -->
 
     <script src="main.js"></script>
   </body>
